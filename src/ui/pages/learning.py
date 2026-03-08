@@ -178,9 +178,8 @@ def _on_unknown(student, sign_id, session, category, container,
     countdown_label.set_visibility(True)
     btn_row.set_visibility(False)
 
-    _countdown(5, countdown_label, lambda: (
-        card_container.delete(),
-        _show_learning_card(student, session, category, container),
+    _countdown(5, countdown_label, lambda: _advance_to_next(
+        card_container, container, student, session, category
     ))
 
 
@@ -193,10 +192,16 @@ def _on_show_name(student, sign_id, session, category, container,
     countdown_label.set_visibility(True)
     btn_row.set_visibility(False)
 
-    _countdown(5, countdown_label, lambda: (
-        card_container.delete(),
-        _show_learning_card(student, session, category, container),
+    _countdown(5, countdown_label, lambda: _advance_to_next(
+        card_container, container, student, session, category
     ))
+
+
+def _advance_to_next(card_container, container, student, session, category):
+    """Delete the current card and show the next one within the container context."""
+    card_container.delete()
+    with container:
+        _show_learning_card(student, session, category, container)
 
 
 def _countdown(seconds, label, on_done):

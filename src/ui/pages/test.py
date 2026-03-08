@@ -186,9 +186,16 @@ def _handle_answer(student, session, chosen_idx, mode, container, card, buttons)
     delay = 0.5 if correct else 2.0
     ui.timer(
         delay,
-        lambda: (card.delete(), _show_question(student, session, mode, container)),
+        lambda: _advance_to_next(card, container, student, session, mode),
         once=True,
     )
+
+
+def _advance_to_next(card, container, student, session, mode):
+    """Delete the current card and show the next question within the container context."""
+    card.delete()
+    with container:
+        _show_question(student, session, mode, container)
 
 
 def _show_retry_prompt(student, session, mode, container):

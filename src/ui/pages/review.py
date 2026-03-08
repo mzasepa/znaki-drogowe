@@ -111,8 +111,7 @@ def _on_correct(student, sign_id, session, container, card_container):
     session.correct.append(sign_id)
     session.current_index += 1
     save_student(student)
-    card_container.delete()
-    _show_review_card(student, session, container)
+    _advance_to_next(card_container, container, student, session)
 
 
 def _on_incorrect(student, sign_id, session, container,
@@ -126,10 +125,16 @@ def _on_incorrect(student, sign_id, session, container,
     countdown_label.set_visibility(True)
     btn_row.set_visibility(False)
 
-    _countdown(5, countdown_label, lambda: (
-        card_container.delete(),
-        _show_review_card(student, session, container),
+    _countdown(5, countdown_label, lambda: _advance_to_next(
+        card_container, container, student, session
     ))
+
+
+def _advance_to_next(card_container, container, student, session):
+    """Delete the current card and show the next one within the container context."""
+    card_container.delete()
+    with container:
+        _show_review_card(student, session, container)
 
 
 def _countdown(seconds, label, on_done):
