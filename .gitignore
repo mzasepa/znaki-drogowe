@@ -12,3 +12,5 @@ data/students/*.json
 !data/students/.gitkeep
 .pytest_cache/
 .claude/
+inne/
+funkcjonalmosc_programu.md
