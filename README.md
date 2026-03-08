@@ -16,8 +16,18 @@ Program edukacyjny do nauki znaków drogowych wymaganych na egzaminie na kartę 
 
 ## Instalacja i uruchomienie
 
-### Windows
+```bash
+pip install -r requirements.txt
+python main.py
+```
 
+Po uruchomieniu `python main.py` program automatycznie otworzy przeglądarkę pod adresem `http://localhost:8080`.
+
+### Instalacja w środowisku wirtualnym (venv)
+
+Jeśli nie możesz instalować bibliotek Pythona globalnie (np. brak uprawnień administratora), użyj środowiska wirtualnego:
+
+**Windows:**
 ```powershell
 python -m venv .venv
 .venv\Scripts\activate
@@ -25,8 +35,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-### macOS
-
+**macOS:**
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
@@ -34,27 +43,24 @@ pip install -r requirements.txt
 python main.py
 ```
 
-### Linux (Ubuntu/Debian)
-
+**Linux (Ubuntu/Debian):**
 ```bash
-sudo apt install python3 python3-venv python3-pip
+sudo apt install python3-venv
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python main.py
 ```
 
-### Linux (Fedora)
-
+**Linux (Fedora):**
 ```bash
-sudo dnf install python3 python3-pip
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python main.py
 ```
 
-Po uruchomieniu `python main.py` program automatycznie otworzy przeglądarkę pod adresem `http://localhost:8080`.
+Przy każdym kolejnym uruchomieniu należy najpierw aktywować środowisko wirtualne (`source .venv/bin/activate` lub `.venv\Scripts\activate` na Windows), a następnie uruchomić `python main.py`.
 
 ## Zamykanie programu
 
