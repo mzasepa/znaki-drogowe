@@ -4,6 +4,7 @@ Program edukacyjny do nauki znaków drogowych wymaganych na egzaminie na kartę 
 
 ## Funkcjonalności
 
+- **Zarządzanie uczniami** — dodawanie nowych uczniów, zmiana imienia (ikona ołówka) oraz usuwanie uczniów (ikona kosza) na stronie wyboru ucznia.
 - **Moduł 1 - Nauka znaków** — wybierz kategorię i ucz się znaków z fiszek. Znaki, których nie znasz, powtarzają się na końcu serii.
 - **Moduł 2 - Powtórki** — system powtórek oparty na algorytmie spaced repetition (SM-2), dostosowany do dzieci 10-12 lat.
 - **Moduł 3 - Test** — losowy test (10/20/30 pytań) lub test ze wszystkich 176 znaków. Dwa typy pytań: obraz→nazwa i nazwa→obraz. Błędne odpowiedzi powtarzane w dogrywce.
@@ -54,6 +55,10 @@ python main.py
 ```
 
 Po uruchomieniu `python main.py` program automatycznie otworzy przeglądarkę pod adresem `http://localhost:8080`.
+
+## Zamykanie programu
+
+Aby zakończyć działanie programu, naciśnij `Ctrl+C` w terminalu, w którym został uruchomiony.
 
 ## Uruchamianie testów
 
