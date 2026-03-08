@@ -1,0 +1,177 @@
+NAZWA_KATALOGU;NAZWA_PLIKU;NAZWA_ZNAKU
+Informacyjne;INFOR-01.png;Droga z pierwszeństwem
+Informacyjne;INFOR-02.png;Koniec drogi z pierwszeństwem
+Informacyjne;INFOR-03.png;Droga jednokierunkowa
+Informacyjne;INFOR-04.png;Droga bez przejazdu
+Informacyjne;INFOR-05.png;Pierwszeństwo na zwężonym odcinku jezdni
+Informacyjne;INFOR-06.png;Przejście dla pieszych
+Informacyjne;INFOR-07.png;Przejazd dla rowerzystów
+Informacyjne;INFOR-08.png;Przejście dla pieszych i przejazd dla rowerzystów
+Informacyjne;INFOR-09.png;Droga ekspresowa
+Informacyjne;INFOR-10.png;Koniec drogi ekspresowej
+Informacyjne;INFOR-11.png;Autostrada
+Informacyjne;INFOR-12.png;Koniec autostrady
+Informacyjne;INFOR-13.png;Początek pasa ruchu dla autobusów
+Informacyjne;INFOR-14.png;Pas ruchu dla autobusów
+Informacyjne;INFOR-15.png;Przystanek autobusowy
+Informacyjne;INFOR-16.png;Przystanek tramwajowy
+Informacyjne;INFOR-17.png;Parking
+Informacyjne;INFOR-18.png;Szpital
+Informacyjne;INFOR-19.png;Policja
+Informacyjne;INFOR-20.png;Punkt opatrunkowy
+Informacyjne;INFOR-21.png;Stacja paliwowa
+Informacyjne;INFOR-22.png;Przejście podziemne dla pieszych
+Informacyjne;INFOR-23.png;Przejście nadziemne dla pieszych
+Informacyjne;INFOR-24.png;Tunel
+Informacyjne;INFOR-25.png;Koniec tunelu
+Informacyjne;INFOR-26.png;Strefa zamieszkania
+Informacyjne;INFOR-27.png;Koniec strefy zamieszkania
+Informacyjne;INFOR-28.png;Strefa parkowania
+Informacyjne;INFOR-29.png;Koniec strefy parkowania
+Informacyjne;INFOR-30.png;Obszar zabudowany
+Informacyjne;INFOR-31.png;Koniec obszaru zabudowanego
+Informacyjne;INFOR-32.png;Droga wewnętrzna
+Informacyjne;INFOR-33.png;Koniec drogi wewnętrznej
+Informacyjne;INFOR-34.png;Strefa ruchu
+Informacyjne;INFOR-35.png;Koniec strefy ruchu
+Kierunku_i_miejscowosci;KIERU-01.png;Tablica przeddrogowskazowa
+Kierunku_i_miejscowosci;KIERU-02.png;Drogowskaz tablicowy umieszczany obok jezdni
+Kierunku_i_miejscowosci;KIERU-03.png;Drogowskaz w kształcie strzały do miejscowości wskazujący numer drogi
+Kierunku_i_miejscowosci;KIERU-04.png;Drogowskaz w kształcie strzały do miejscowości podający do niej odległość
+Kierunku_i_miejscowosci;KIERU-05.png;Drogowskaz do dzielnicy miasta
+Kierunku_i_miejscowosci;KIERU-06.png;Tablica kierunkowa
+Kierunku_i_miejscowosci;KIERU-07.png;Miejscowość
+Kierunku_i_miejscowosci;KIERU-08.png;Koniec miejscowości
+Kierunku_i_miejscowosci;KIERU-09.png;Dzielnica (osiedle)
+Nakazu;NAKAZ-01.png;Nakaz jazdy w prawo przed znakiem
+Nakazu;NAKAZ-02.png;Nakaz jazdy w prawo za znakiem
+Nakazu;NAKAZ-03.png;Nakaz jazdy w lewo przed znakiem
+Nakazu;NAKAZ-04.png;Nakaz jazdy w lewo
+Nakazu;NAKAZ-05.png;Nakaz jazdy prosto
+Nakazu;NAKAZ-06.png;Nakaz jazdy prosto lub w prawo
+Nakazu;NAKAZ-07.png;Nakaz jazdy prosto lub w lewo
+Nakazu;NAKAZ-08.png;Nakaz jazdy w prawo lub w lewo
+Nakazu;NAKAZ-09.png;Nakaz jazdy z prawej strony znaku
+Nakazu;NAKAZ-10.png;Nakaz jazdy z lewej strony znaku
+Nakazu;NAKAZ-11.png;Nakaz jazdy z prawej lub lewej strony znaku
+Nakazu;NAKAZ-12.png;Ruch okrężny
+Nakazu;NAKAZ-13.png;Droga dla rowerów
+Nakazu;NAKAZ-14.png;Koniec drogi dla rowerów
+Nakazu;NAKAZ-15.png;Prędkość minimalna
+Nakazu;NAKAZ-16.png;Koniec prędkości minimalnej
+Nakazu;NAKAZ-17.png;Droga dla pieszych
+Nakazu;NAKAZ-18.png;Koniec drogi dla pieszych
+Ostrzegawcze;OSTRZ-01.png;Niebezpieczny zakręt w prawo
+Ostrzegawcze;OSTRZ-02.png;Niebezpieczny zakręt w lewo
+Ostrzegawcze;OSTRZ-03.png;Niebezpieczne zakręty - pierwszy w prawo
+Ostrzegawcze;OSTRZ-04.png;Niebezpieczne zakręty - pierwszy w lewo
+Ostrzegawcze;OSTRZ-05.png;Skrzyżowanie dróg
+Ostrzegawcze;OSTRZ-06.png;Skrzyżowanie z drogą podporządkowaną występującą po obu stronach
+Ostrzegawcze;OSTRZ-07.png;Skrzyżowanie z drogą podporządkowaną występującą po prawej stronie
+Ostrzegawcze;OSTRZ-08.png;Skrzyżowanie z drogą podporządkowaną występującą po lewej stronie
+Ostrzegawcze;OSTRZ-09.png;Wlot drogi jednokierunkowej z prawej strony
+Ostrzegawcze;OSTRZ-10.png;Wlot drogi jednokierunkowej z lewej strony
+Ostrzegawcze;OSTRZ-11.png;Ustąp pierwszeństwa
+Ostrzegawcze;OSTRZ-12.png;Skrzyżowanie o ruchu okrężnym
+Ostrzegawcze;OSTRZ-13.png;Przejazd kolejowy z zaporami
+Ostrzegawcze;OSTRZ-14.png;Przejazd kolejowy bez zapór
+Ostrzegawcze;OSTRZ-15.png;Nierówna droga
+Ostrzegawcze;OSTRZ-16.png;Próg zwalniający
+Ostrzegawcze;OSTRZ-17.png;Zwężenie jezdni - dwustronne
+Ostrzegawcze;OSTRZ-18.png;Zwężenie jezdni - prawostronne
+Ostrzegawcze;OSTRZ-19.png;Zwężenie jezdni - lewostronne
+Ostrzegawcze;OSTRZ-20.png;Roboty na drodze
+Ostrzegawcze;OSTRZ-21.png;Śliska jezdnia
+Ostrzegawcze;OSTRZ-22.png;Przejście dla pieszych
+Ostrzegawcze;OSTRZ-23.png;Dzieci
+Ostrzegawcze;OSTRZ-24.png;Zwierzęta gospodarskie
+Ostrzegawcze;OSTRZ-25.png;Zwierzęta dzikie
+Ostrzegawcze;OSTRZ-26.png;Odcinek jezdni o ruchu dwukierunkowym
+Ostrzegawcze;OSTRZ-27.png;Tramwaj
+Ostrzegawcze;OSTRZ-28.png;Niebezpieczny zjazd
+Ostrzegawcze;OSTRZ-29.png;Stromy podjazd
+Ostrzegawcze;OSTRZ-30.png;Rowerzyści
+Ostrzegawcze;OSTRZ-31.png;Nabrzeże lub brzeg rzeki
+Ostrzegawcze;OSTRZ-32.png;Sygnały świetlne
+Ostrzegawcze;OSTRZ-33.png;Inne niebezpieczeństwo
+Ostrzegawcze;OSTRZ-34.png;Niebezpieczne pobocze
+Ostrzegawcze;OSTRZ-35.png;Oszronienie jezdni
+Poziome;POZIO-01.png;Linia pojedyncza przerywana
+Poziome;POZIO-02.png;Linia pojedyncza ciągła
+Poziome;POZIO-03.png;Linia jednostronnie przekraczalna
+Poziome;POZIO-04.png;Linia podwójna ciągła
+Poziome;POZIO-05.png;Linia podwójna przerywana
+Poziome;POZIO-06.png;Linia ostrzegawcza
+Poziome;POZIO-07.png;Linia krawędziowa przerywana
+Poziome;POZIO-08.png;Linia krawędziowa ciągła
+Poziome;POZIO-09.png;Strzałka kierunkowa na wprost
+Poziome;POZIO-10.png;Strzałka kierunkowa do skręcania
+Poziome;POZIO-11.png;Strzałka kierunkowa do zawracania
+Poziome;POZIO-12.png;Strzałka naprowadzająca
+Poziome;POZIO-13.png;Przejście dla pieszych
+Poziome;POZIO-14.png;Przejazd dla rowerzystów
+Poziome;POZIO-15.png;Linia bezwzględnego zatrzymania - stop
+Poziome;POZIO-16.png;Linia warunkowego zatrzymania złożona z trójkątów
+Poziome;POZIO-17.png;Linia warunkowego zatrzymania złożona z prostokątów
+Poziome;POZIO-18.png;Trójkąt podporządkowania
+Poziome;POZIO-19.png;Napis stop
+Poziome;POZIO-20.png;Powierzchnia wyłączona
+Poziome;POZIO-21.png;BUS
+Poziome;POZIO-22.png;Rower
+Poziome;POZIO-23.png;Miejsce dla pojazdu osoby niepełnosprawnej
+Przed_przejazdami_kolejowymi;PRZED-01.png;Słupek wskaźnikowy z trzema kreskami
+Przed_przejazdami_kolejowymi;PRZED-02.png;Słupek wskaźnikowy z dwiema kreskami
+Przed_przejazdami_kolejowymi;PRZED-03.png;Słupek wskaźnikowy z jedną kreską
+Przed_przejazdami_kolejowymi;PRZED-04.png;Krzyż św. Andrzeja przed przejazdem kolejowym jednotorowym
+Przed_przejazdami_kolejowymi;PRZED-05.png;Krzyż św. Andrzeja przed przejazdem kolejowym wielotorowym
+Sygnaly_swietlne;SYGNA-01.png;Sygnalizator z sygnałem do kierowania ruchem
+Sygnaly_swietlne;SYGNA-02.png;Sygnalizator z sygnałem dopuszczającym skręcanie w kierunku wskazanym strzałką
+Sygnaly_swietlne;SYGNA-03.png;Sygnalizator kierunkowy
+Sygnaly_swietlne;SYGNA-04.png;Sygnalizator z sygnałem dla pieszych
+Sygnaly_swietlne;SYGNA-05.png;Sygnalizator z sygnałem dla rowerzystów
+Szlaki_rowerowe;SZLAK-01.png;Szlak rowerowy lokalny
+Szlaki_rowerowe;SZLAK-02.png;Początek (koniec) szlaku rowerowego lokalnego
+Szlaki_rowerowe;SZLAK-03.png;Zmiana kierunku szlaku rowerowego lokalnego
+Szlaki_rowerowe;SZLAK-04.png;Tablica szlaku rowerowego
+Tabliczki_do_znakow;TABLI-01.png;Odległość znaku ostrzegawczego od miejsca niebezpiecznego
+Tabliczki_do_znakow;TABLI-02.png;Długość odcinka drogi, na którym powtarza się lub występuje niebezpieczeństwo
+Tabliczki_do_znakow;TABLI-03.png;Koniec odcinka, na którym powtarza się lub występuje niebezpieczeństwo
+Tabliczki_do_znakow;TABLI-04.png;Liczba zakrętów
+Tabliczki_do_znakow;TABLI-05.png;Początek drogi krętej
+Tabliczki_do_znakow;TABLI-06.png;Przebieg drogi z pierwszeństwem przez skrzyżowanie
+Tabliczki_do_znakow;TABLI-07.png;Układ dróg podporządkowanych
+Tabliczki_do_znakow;TABLI-08.png;Przeciwległy przebieg drogi z pierwszeństwem i układ dróg podporządkowanych
+Tabliczki_do_znakow;TABLI-09.png;Miejsce częstych wypadków
+Tabliczki_do_znakow;TABLI-10.png;Miejsce wyjazdu pojazdów uprzywilejowanych
+Tabliczki_do_znakow;TABLI-11.png;Długość odcinka jezdni, na którym zakaz obowiązuje
+Tabliczki_do_znakow;TABLI-12.png;Odległość znaku od miejsca, od którego lub w którym zakaz obowiązuje
+Tabliczki_do_znakow;TABLI-13.png;Początek zakazu postoju lub zatrzymywania
+Tabliczki_do_znakow;TABLI-14.png;Kontynuacja zakazu postoju lub zatrzymywania
+Tabliczki_do_znakow;TABLI-15.png;Odwołanie zakazu postoju lub zatrzymywania
+Tabliczki_do_znakow;TABLI-16.png;Przejście dla pieszych szczególnie uczęszczane przez dzieci (Agatka)
+Uzupelniajace;UZUPE-01.png;Sposób jazdy w związku z zakazem skręcania w lewo
+Uzupelniajace;UZUPE-02.png;Ruch skierowany na sąsiednią jezdnię
+Uzupelniajace;UZUPE-03.png;Kierunki na pasach ruchu
+Uzupelniajace;UZUPE-04.png;Niesymetryczny podział jezdni dla poszczególnych kierunków ruchu
+Uzupelniajace;UZUPE-05.png;Koniec pasa ruchu na jezdni dwujezdniowej
+Uzupelniajace;UZUPE-06.png;Pas ruchu dla określonych pojazdów
+Zakazu;ZAKAZ-01.png;Zakaz ruchu w obu kierunkach
+Zakazu;ZAKAZ-02.png;Zakaz wjazdu
+Zakazu;ZAKAZ-03.png;Zakaz wjazdu rowerów
+Zakazu;ZAKAZ-04.png;Zakaz wjazdu wózków rowerowych
+Zakazu;ZAKAZ-05.png;Stop
+Zakazu;ZAKAZ-06.png;Zakaz skręcania w lewo
+Zakazu;ZAKAZ-07.png;Zakaz skręcania w prawo
+Zakazu;ZAKAZ-08.png;Zakaz zawracania
+Zakazu;ZAKAZ-09.png;Koniec zakazu zawracania
+Zakazu;ZAKAZ-10.png;Zakaz używania sygnałów dźwiękowych
+Zakazu;ZAKAZ-11.png;Koniec zakazu używania sygnałów dźwiękowych
+Zakazu;ZAKAZ-12.png;Pierwszeństwo dla nadjeżdżających z przeciwka
+Zakazu;ZAKAZ-13.png;Ograniczenie prędkości
+Zakazu;ZAKAZ-14.png;Koniec ograniczenia prędkości
+Zakazu;ZAKAZ-15.png;Zakaz postoju
+Zakazu;ZAKAZ-16.png;Zakaz zatrzymywania się
+Zakazu;ZAKAZ-17.png;Zakaz ruchu pieszych
+Zakazu;ZAKAZ-18.png;Koniec zakazów
+Zakazu;ZAKAZ-19.png;Strefa ograniczonej prędkości
+Zakazu;ZAKAZ-20.png;Koniec strefy ograniczonej prędkości
