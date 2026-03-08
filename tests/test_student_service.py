@@ -9,6 +9,7 @@ from src.services.student_service import (
     load_student,
     list_students,
     delete_student,
+    rename_student,
     get_dashboard_stats,
     _sanitize_id,
 )
@@ -82,6 +83,33 @@ class TestDeleteStudent:
 
     def test_delete_nonexistent(self, tmp_path):
         assert delete_student("ghost", data_dir=tmp_path) is False
+
+
+class TestRenameStudent:
+    def test_rename_existing_student(self, tmp_path):
+        create_student("Jan Kowalski", data_dir=tmp_path)
+        result = rename_student("jan_kowalski", "Jan Nowak", data_dir=tmp_path)
+        assert result is not None
+        assert result.display_name == "Jan Nowak"
+        # Verify persisted in student file
+        loaded = load_student("jan_kowalski", data_dir=tmp_path)
+        assert loaded.display_name == "Jan Nowak"
+        # Verify updated in index
+        students = list_students(data_dir=tmp_path)
+        assert students[0]["display_name"] == "Jan Nowak"
+
+    def test_rename_nonexistent_returns_none(self, tmp_path):
+        assert rename_student("ghost", "New Name", data_dir=tmp_path) is None
+
+    def test_rename_preserves_progress(self, tmp_path):
+        student = create_student("Jan Kowalski", data_dir=tmp_path)
+        student.signs["INFOR-01"] = {"status": "learned", "next_review": "2026-03-10"}
+        student.test_history.append({"score": 80, "date": "2026-03-08"})
+        save_student(student, data_dir=tmp_path)
+
+        result = rename_student("jan_kowalski", "Jan Nowak", data_dir=tmp_path)
+        assert result.signs["INFOR-01"]["status"] == "learned"
+        assert result.test_history[0]["score"] == 80
 
 
 class TestDashboardStats:

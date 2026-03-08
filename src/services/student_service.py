@@ -131,6 +131,30 @@ def delete_student(student_id: str, data_dir: Path = DATA_DIR) -> bool:
     return deleted
 
 
+def rename_student(student_id: str, new_display_name: str, data_dir: Path = DATA_DIR) -> Student | None:
+    """Rename a student's display name. Returns updated Student or None if not found."""
+    student = load_student(student_id, data_dir)
+    if student is None:
+        return None
+
+    student.display_name = new_display_name
+    save_student(student, data_dir)
+
+    # Update index
+    index_file = data_dir / "index.json"
+    if index_file.exists():
+        with open(index_file, encoding="utf-8") as f:
+            index = json.load(f)
+        for s in index["students"]:
+            if s["student_id"] == student_id:
+                s["display_name"] = new_display_name
+                break
+        with open(index_file, "w", encoding="utf-8") as f:
+            json.dump(index, f, ensure_ascii=False, indent=2)
+
+    return student
+
+
 def get_dashboard_stats(student: Student) -> DashboardStats:
     """Calculate dashboard statistics for a student."""
     total = len(get_all_signs())

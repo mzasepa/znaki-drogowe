@@ -13,4 +13,4 @@ data/students/*.json
 .pytest_cache/
 .claude/
 inne/
-funkcjonalmosc_programu.md
+funkcjonalnosc_programu.md
