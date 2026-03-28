@@ -1,5 +1,6 @@
 """Spaced repetition engine - simplified SM-2 for children."""
 
+import random
 from dataclasses import dataclass, field
 from datetime import date, timedelta
 
@@ -56,6 +57,7 @@ def create_review_session(student: Student) -> ReviewSession:
         sign = get_sign_by_id(sid)
         if sign:
             signs.append(sign)
+    random.shuffle(signs)
     return ReviewSession(signs=signs)
 
 
