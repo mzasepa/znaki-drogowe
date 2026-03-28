@@ -111,10 +111,12 @@ def _show_learning_card(student, session: LearningSession, category, container):
     with card_container:
         # Progress bar
         progress = session.progress / session.total if session.total else 0
+        pct = round(progress * 100)
         ui.label(
-            f"Znak {session.progress + 1} z {session.total}"
+            f"Znak {session.progress + 1} z {session.total} ({pct}%)"
         ).style("font-size: 0.9rem; color: #666;")
-        ui.linear_progress(value=progress).classes("w-full")
+        with ui.linear_progress(value=progress, show_value=False, size="20px").classes("w-full"):
+            ui.label(f"{pct}%").classes("absolute-center text-sm text-white")
 
         # Sign image
         img_path = get_image_path(sign)

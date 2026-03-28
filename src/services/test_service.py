@@ -89,17 +89,25 @@ def generate_question(sign: Sign, question_type: int | None = None) -> Question:
 
 
 def create_test_session(
-    mode: str = "random", count: int = 20
+    mode: str = "random", count: int = 20, student: Student | None = None
 ) -> TestSession:
     """Create a test session.
 
-    mode: "random" (pick count signs) or "all" (all 176 signs)
-    count: number of signs for random mode (10, 20, or 30)
+    mode: "learned" (from learned signs), "all" (all 176 signs)
+    count: number of signs for learned mode (10, 20, or 30)
+    student: required for "learned" mode to filter by learned signs
     """
-    all_signs = get_all_signs()
-    if mode == "all":
-        selected = list(all_signs)
+    if mode == "learned" and student:
+        learned_ids = [
+            sid for sid, data in student.signs.items()
+            if data.get("status") == "learned"
+        ]
+        learned_signs = [s for sid in learned_ids if (s := get_sign_by_id(sid))]
+        selected = random.sample(learned_signs, min(count, len(learned_signs)))
+    elif mode == "all":
+        selected = list(get_all_signs())
     else:
+        all_signs = get_all_signs()
         selected = random.sample(all_signs, min(count, len(all_signs)))
 
     random.shuffle(selected)

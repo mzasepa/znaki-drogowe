@@ -38,19 +38,34 @@ def _show_mode_selection(student, container):
             "font-weight: bold; font-size: 1.1rem; margin-bottom: 12px;"
         )
 
-        # Random mode
-        ui.label("Losowy test:").style("font-size: 1rem; margin-bottom: 4px;")
-        count_radio = ui.radio(
-            {10: "10 pytań", 20: "20 pytań", 30: "30 pytań"},
-            value=20,
-        ).props("inline")
+        # Learned signs mode
+        learned_count = sum(
+            1 for s in student.signs.values()
+            if s.get("status") == "learned"
+        )
+        ui.label("Test z nauczonych znaków:").style(
+            "font-size: 1rem; margin-bottom: 4px;"
+        )
+        max_questions = min(learned_count, 30)
+        options = {n: f"{n} pytań" for n in [10, 20, 30] if n <= max_questions}
+        if not options and learned_count > 0:
+            options = {learned_count: f"{learned_count} pytań"}
+        default_value = max(options) if options else 10
+        count_radio = ui.radio(options, value=default_value).props("inline")
+
+        if learned_count == 0:
+            ui.label("Najpierw naucz się znaków w module nauki!").style(
+                "font-size: 0.9rem; color: #999; margin-bottom: 8px;"
+            )
 
         ui.button(
-            "Rozpocznij losowy test",
+            f"Test z nauczonych znaków ({learned_count})",
             on_click=lambda: _start_test(
-                student, "random", count_radio.value, container
+                student, "learned", count_radio.value, container
             ),
-        ).style(theme.BUTTON_STYLE_ORANGE).classes("w-full q-mb-md")
+        ).style(theme.BUTTON_STYLE_ORANGE).classes("w-full q-mb-md").bind_enabled_from(
+            target_object=count_radio, target_name="value", backward=lambda v: v is not None and learned_count > 0
+        )
 
         ui.separator().classes("q-my-md")
 
@@ -70,7 +85,7 @@ def _show_mode_selection(student, container):
 
 def _start_test(student, mode, count, container):
     """Start a test session."""
-    session = create_test_session(mode=mode, count=count)
+    session = create_test_session(mode=mode, count=count, student=student)
     container.clear()
     with container:
         ui.label("Test").style(theme.TITLE_STYLE)
@@ -92,11 +107,13 @@ def _show_question(student, session: TestSession, mode, container):
 
     with card:
         # Progress
-        ui.label(
-            f"Pytanie {session.current_index + 1} z {session.total}"
-        ).style("font-size: 0.9rem; color: #666;")
         progress = session.current_index / session.total
-        ui.linear_progress(value=progress).classes("w-full q-mb-md")
+        pct = round(progress * 100)
+        ui.label(
+            f"Pytanie {session.current_index + 1} z {session.total} ({pct}%)"
+        ).style("font-size: 0.9rem; color: #666;")
+        with ui.linear_progress(value=progress, show_value=False, size="20px").classes("w-full q-mb-md"):
+            ui.label(f"{pct}%").classes("absolute-center text-sm text-white")
 
         if question.question_type == 1:
             _render_type1(student, session, question, mode, container, card)

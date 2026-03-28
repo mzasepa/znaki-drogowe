@@ -30,6 +30,28 @@ class TestCreateTestSession:
         session = create_test_session(mode="all")
         assert session.total == 176
 
+    def test_learned_mode_filters_by_student(self):
+        student = Student(student_id="test", display_name="Test")
+        student.signs["INFOR-01"] = {"status": "learned"}
+        student.signs["INFOR-02"] = {"status": "learned"}
+        student.signs["INFOR-03"] = {"status": "learning"}
+        session = create_test_session(mode="learned", count=10, student=student)
+        assert session.total == 2
+        sign_ids = {q.sign.sign_id for q in session.questions}
+        assert sign_ids == {"INFOR-01", "INFOR-02"}
+
+    def test_learned_mode_respects_count(self):
+        student = Student(student_id="test", display_name="Test")
+        for i in range(1, 16):
+            student.signs[f"INFOR-{i:02d}"] = {"status": "learned"}
+        session = create_test_session(mode="learned", count=10, student=student)
+        assert session.total == 10
+
+    def test_learned_mode_empty_when_no_learned(self):
+        student = Student(student_id="test", display_name="Test")
+        session = create_test_session(mode="learned", count=10, student=student)
+        assert session.total == 0
+
 
 class TestGenerateQuestion:
     def test_type_1_has_4_text_options(self):
