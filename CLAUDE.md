@@ -31,17 +31,20 @@ python -m pytest tests/test_sign_catalog.py::test_function_name -v
 **Three-module structure** matching the learning flow:
 - **Module 1 (Learning)**: Flashcard-style sign learning by category. Unknown signs repeat at end of series.
 - **Module 2 (Review)**: Spaced repetition using simplified SM-2 algorithm (see `repetition_service.py` constants: `INITIAL_INTERVALS`, `MIN_EASE`, `MAX_EASE`, `MAX_INTERVAL`).
-- **Module 3 (Test)**: Quiz with two question types (image→name, name→image) and wrong-answer replays.
+- **Module 3 (Test)**: Quiz with two question types (image→name, name→image) and wrong-answer replays. Test modes: `"learned"` (only signs the student has learned, requires `student` param), `"all"` (all 176 signs).
 
 **Layer separation**:
 - `src/models/` — Data classes (`Student`, `Sign`, `SignProgress`, `TestResult`) and sign catalog (loads from `znaki/nazwy_znakow.csv`, semicolon-delimited)
 - `src/services/` — Business logic per module: `learning_service`, `repetition_service`, `test_service`, plus `student_service` for CRUD
 - `src/ui/pages/` — NiceGUI page components. Routes defined in `src/ui/app.py`: `/` (student select), `/dashboard`, `/learning`, `/review`, `/test`
 - `src/ui/app.py` — Per-session student state via `_current_students` dict keyed by browser session ID
+- `src/ui/theme.py` — Child-friendly color palette and reusable style constants (button, card, page styles)
 
 **Data storage**: Student progress stored as JSON files in `data/students/` (gitignored). An `index.json` maps student IDs to display names.
 
-**Sign assets**: `znaki/` directory contains PNG images organized by category subdirectories (Ostrzegawcze, Zakazu, Nakazu, Informacyjne, Kierunku, Uzupelniajace) and a master CSV (`znaki/nazwy_znakow.csv`) with columns: category, filename, name.
+**Sign status lifecycle**: `"unseen"` → `"learning"` (marked unknown) → `"learned"` (marked known). Status stored in `student.signs[sign_id]["status"]`. Services filter by status (e.g., `get_unlearned_signs()`, learned-mode tests).
+
+**Sign assets**: `znaki/` directory contains PNG images organized by 11 category subdirectories and a master CSV (`znaki/nazwy_znakow.csv`, semicolon-delimited) with columns: category, filename, name.
 
 **Sign catalog caching**: `sign_catalog.py` uses a module-level `_signs_cache`. Call `reload_signs()` in tests to reset it.
 
