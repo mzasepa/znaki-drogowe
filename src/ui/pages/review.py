@@ -62,11 +62,13 @@ def _show_review_card(student, session: ReviewSession, container):
 
     with card_container:
         # Progress
-        ui.label(
-            f"Znak {session.current_index + 1} z {session.total}"
-        ).style("font-size: 0.9rem; color: #666;")
         progress = session.current_index / session.total
-        ui.linear_progress(value=progress).classes("w-full")
+        pct = round(progress * 100)
+        ui.label(
+            f"Znak {session.current_index + 1} z {session.total} ({pct}%)"
+        ).style("font-size: 0.9rem; color: #666;")
+        with ui.linear_progress(value=progress, show_value=False, size="20px").classes("w-full"):
+            ui.label(f"{pct}%").classes("absolute-center text-sm text-white")
 
         # Sign image
         img_path = get_image_path(sign)
