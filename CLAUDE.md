@@ -46,11 +46,20 @@ python -m pytest tests/test_sign_catalog.py::test_function_name -v
 
 **Sign assets**: `znaki/` directory contains PNG images organized by 11 category subdirectories and a master CSV (`znaki/nazwy_znakow.csv`, semicolon-delimited) with columns: category, filename, name.
 
-**Sign catalog caching**: `sign_catalog.py` uses a module-level `_signs_cache`. Call `reload_signs()` in tests to reset it.
+**Sign catalog caching**: `sign_catalog.py` uses a module-level `_signs_cache`. Call `reload_signs()` in tests to reset it. Sign ID is derived from filename without extension (e.g., `INFOR-01.png` → `INFOR-01`).
+
+**Student ID sanitization**: `student_service._sanitize_id()` handles Polish diacritics via NFKD normalization with special handling for Ł→L, converts spaces to underscores.
+
+**Session management**: Per-browser-session student state via `_current_students` dict in `app.py`, keyed by `app.storage.browser["session_id"]`. Pages must call `set_current_student()` before navigation.
+
+**Session-based services**: `LearningSession`, `ReviewSession`, `TestSession` all follow the same pattern — `current_index` tracks progress, `is_complete` property signals end, `current_sign`/`current_question` returns `None` when complete.
+
+**Reference files**: `zestawienie_znakow_do_nauki.md` and `.html` in project root present all 176 signs by category — regenerate from CSV if sign names change.
 
 ## Conventions
 
 - Each feature should be introduced as a separate PR before starting the next one
 - TDD approach — write tests first
-- Tests use `tmp_path` fixtures for isolated student data (see `tests/conftest.py`)
+- Tests use `tmp_path` fixtures for isolated student data (see `tests/conftest.py`: `tmp_data_dir`, `sample_student_data`)
 - `pytest-asyncio` is available for async test needs
+- All UI text in Polish; code, comments, and commit messages in English

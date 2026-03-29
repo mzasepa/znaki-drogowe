@@ -46,7 +46,7 @@ Kierunku_i_miejscowosci;KIERU-09.png;Dzielnica (osiedle)
 Nakazu;NAKAZ-01.png;Nakaz jazdy w prawo przed znakiem
 Nakazu;NAKAZ-02.png;Nakaz jazdy w prawo za znakiem
 Nakazu;NAKAZ-03.png;Nakaz jazdy w lewo przed znakiem
-Nakazu;NAKAZ-04.png;Nakaz jazdy w lewo
+Nakazu;NAKAZ-04.png;Nakaz jazdy w lewo za znakiem
 Nakazu;NAKAZ-05.png;Nakaz jazdy prosto
 Nakazu;NAKAZ-06.png;Nakaz jazdy prosto lub w prawo
 Nakazu;NAKAZ-07.png;Nakaz jazdy prosto lub w lewo
@@ -124,11 +124,11 @@ Przed_przejazdami_kolejowymi;PRZED-02.png;Słupek wskaźnikowy z dwiema kreskami
 Przed_przejazdami_kolejowymi;PRZED-03.png;Słupek wskaźnikowy z jedną kreską
 Przed_przejazdami_kolejowymi;PRZED-04.png;Krzyż św. Andrzeja przed przejazdem kolejowym jednotorowym
 Przed_przejazdami_kolejowymi;PRZED-05.png;Krzyż św. Andrzeja przed przejazdem kolejowym wielotorowym
-Sygnaly_swietlne;SYGNA-01.png;Sygnalizator z sygnałem do kierowania ruchem
-Sygnaly_swietlne;SYGNA-02.png;Sygnalizator z sygnałem dopuszczającym skręcanie w kierunku wskazanym strzałką
+Sygnaly_swietlne;SYGNA-01.png;Sygnalizator z sygnałami do kierowania ruchem
+Sygnaly_swietlne;SYGNA-02.png;Sygnalizator z sygnałami dopuszczającym skręcanie w kierunku wskazanym strzałką
 Sygnaly_swietlne;SYGNA-03.png;Sygnalizator kierunkowy
-Sygnaly_swietlne;SYGNA-04.png;Sygnalizator z sygnałem dla pieszych
-Sygnaly_swietlne;SYGNA-05.png;Sygnalizator z sygnałem dla rowerzystów
+Sygnaly_swietlne;SYGNA-04.png;Sygnalizator z sygnałami dla pieszych
+Sygnaly_swietlne;SYGNA-05.png;Sygnalizator z sygnałami dla rowerzystów
 Szlaki_rowerowe;SZLAK-01.png;Szlak rowerowy lokalny
 Szlaki_rowerowe;SZLAK-02.png;Początek (koniec) szlaku rowerowego lokalnego
 Szlaki_rowerowe;SZLAK-03.png;Zmiana kierunku szlaku rowerowego lokalnego
@@ -140,7 +140,7 @@ Tabliczki_do_znakow;TABLI-04.png;Liczba zakrętów
 Tabliczki_do_znakow;TABLI-05.png;Początek drogi krętej
 Tabliczki_do_znakow;TABLI-06.png;Przebieg drogi z pierwszeństwem przez skrzyżowanie
 Tabliczki_do_znakow;TABLI-07.png;Układ dróg podporządkowanych
-Tabliczki_do_znakow;TABLI-08.png;Przeciwległy przebieg drogi z pierwszeństwem i układ dróg podporządkowanych
+Tabliczki_do_znakow;TABLI-08.png;Prostopadły przebieg drogi z pierwszeństwem i układ dróg podporządkowanych
 Tabliczki_do_znakow;TABLI-09.png;Miejsce częstych wypadków
 Tabliczki_do_znakow;TABLI-10.png;Miejsce wyjazdu pojazdów uprzywilejowanych
 Tabliczki_do_znakow;TABLI-11.png;Długość odcinka jezdni, na którym zakaz obowiązuje
@@ -152,8 +152,8 @@ Tabliczki_do_znakow;TABLI-16.png;Przejście dla pieszych szczególnie uczęszcza
 Uzupelniajace;UZUPE-01.png;Sposób jazdy w związku z zakazem skręcania w lewo
 Uzupelniajace;UZUPE-02.png;Ruch skierowany na sąsiednią jezdnię
 Uzupelniajace;UZUPE-03.png;Kierunki na pasach ruchu
-Uzupelniajace;UZUPE-04.png;Niesymetryczny podział jezdni dla poszczególnych kierunków ruchu
-Uzupelniajace;UZUPE-05.png;Koniec pasa ruchu na jezdni dwujezdniowej
+Uzupelniajace;UZUPE-04.png;Niesymetryczny podział jezdni dla przeciwległych kierunków ruchu
+Uzupelniajace;UZUPE-05.png;Koniec pasa ruchu na jezdni dwukierunkowej
 Uzupelniajace;UZUPE-06.png;Pas ruchu dla określonych pojazdów
 Zakazu;ZAKAZ-01.png;Zakaz ruchu w obu kierunkach
 Zakazu;ZAKAZ-02.png;Zakaz wjazdu
